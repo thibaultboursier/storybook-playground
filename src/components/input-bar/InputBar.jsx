@@ -11,20 +11,23 @@ export class InputBar extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="input-group">
                 <input 
+                    className="form-control"
                     onChange={this.onMessageChanged} value={this.state.message}
                     placeholder="Your message" 
                     type="text" 
                 />
-                <button
-                    className="btn btn-primary btn-sm"
-                    disabled={!this.state.message}
-                    onClick={this.onButtonClicked}
-                    type="button"
-                >
-                    send
-                </button>
+                <div className="input-group-append">
+                    <button
+                        className="btn btn-primary"
+                        disabled={!this.state.message}
+                        onClick={this.onButtonClicked}
+                        type="button"
+                    >
+                        send
+                    </button>
+                </div>
             </div>
         );
     }
