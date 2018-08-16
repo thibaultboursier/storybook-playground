@@ -43,7 +43,7 @@ export class InputBar extends React.Component {
 
         this.setState(state => ({
             message: {
-                ...state.message,
+                id: uuidv4(),
                 content: '',
             },
         }));
